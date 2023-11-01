@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form action="register.php" method="POST" id="registrationForm">
+        <label for="username">Username:</label>
+        <input type="text" name="username" required><br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br>
+        <input type="hidden" name="latitude" id="latitude">
+        <input type="hidden" name="longitude" id="longitude">
+        <p id="locationStatus"></p>
+        <button type="submit" id="registerButton" disabled>Register</button>
+    </form>
+
+    <script src="autolocate.js"></script>
+</body>
+</html>
