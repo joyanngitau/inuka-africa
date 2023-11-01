@@ -35,4 +35,9 @@ if ($latitude >= $minLat && $latitude <= $maxLat && $longitude >= $minLng && $lo
 
 // Close the connection
 $connection->close();
+echo '<script>
+    alert("Registration successful! You will be redirected to the home page.");
+    window.location.href = "index.html";
+</script>';
+exit; 
 ?>

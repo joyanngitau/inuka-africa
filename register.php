@@ -31,14 +31,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Location is outside the allowed area, inform the user
         echo "Registration failed. You are outside the registration area.";
     }
+
+    echo '<script>
+    alert("Registration successful! You will be redirected to the home page.");
+    window.location.href = "index.html";
+</script>';
+exit; 
 }
 
 function isLocationWithinBoundaries($latitude, $longitude) {
-    // Define geofencing boundaries (adjust these to match your registration area)
-    $minLat = -1.5;
-    $maxLat = -0.5;
-    $minLng = 36.0;
-    $maxLng = 37.0;
+    // Define geofencing boundaries
+    $minLat = -4.0;
+    $maxLat = 4.0;
+    $minLng = 33.0;
+    $maxLng = 42.0;
 
     return ($latitude >= $minLat && $latitude <= $maxLat && $longitude >= $minLng && $longitude <= $maxLng);
 }
